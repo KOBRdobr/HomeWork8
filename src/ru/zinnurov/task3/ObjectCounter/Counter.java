@@ -13,7 +13,7 @@ public class Counter {
         objectCounter();
     }
 
-    public void objectCounter() {
+    private void objectCounter() {
         System.out.println("Создано объектов: " + count);
     }
 
