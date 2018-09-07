@@ -47,7 +47,12 @@ public class Calculator {
     }
 
     private static void division() {
-        System.out.println("Ответ : " + (fitstNum / secNum));
+        if(secNum != 0) {
+            System.out.println("Ответ : " + (fitstNum / secNum));
+        }
+        else {
+            System.out.println("На ноль делить нелья!");
+        }
     }
 
     private static void multiplication() {

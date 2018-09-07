@@ -8,13 +8,13 @@ import java.util.Scanner;
  */
 public class Main {
 
-    private static int input() {
+    private static double input() {
         Scanner in = new Scanner(System.in);
-        int choice;  //Переменная хранящая выбор пользователя
+        double choice;  //Переменная хранящая выбор пользователя
 
         while (true) {
-            if (in.hasNextInt()) {
-                choice = in.nextInt();
+            if (in.hasNextDouble()) {
+                choice = in.nextDouble();
                 break;
             } else {
                 System.out.println("Введите числа!");
