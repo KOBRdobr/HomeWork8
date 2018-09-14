@@ -6,61 +6,61 @@ package ru.zinnurov.task2;
  */
 
 public class Calculator {
-    static double fitstNum, secNum;
-    static String sign;
     static final int PERCENT = 100;
 
-    public Calculator(double firstNum, double secNum, String sign) {
-        this.fitstNum = firstNum;
-        this.secNum = secNum;
-        this.sign = sign;
-    }
 
-    public static void chooseOperation() {
+    public static void chooseOperation(double firstNum, double secNum, String sign) {
+        double result;
+
         switch (sign) {
             case "+" :
-                addition();
+                result = addition(firstNum, secNum);
+                System.out.println("Ответ: " + result);
                 break;
             case "-" :
-                subtraction();
+                result = subtraction(firstNum, secNum);
+                System.out.println("Ответ: " + result);
                 break;
             case "/" :
-                division();
+                result = division(firstNum, secNum);
+                System.out.println("Ответ: " + result);
                 break;
             case "*" :
-                multiplication();
+                result = multiplication(firstNum, secNum);
+                System.out.println("Ответ: " + result);
                 break;
             case "%" :
-                percent();
+                result = percent(firstNum, secNum);
+                System.out.println("Ответ: " + result);
                 break;
             default:
                 System.out.println("Введите знак операции!");
         }
     }
 
-    private static void addition() {
-        System.out.println("Ответ : " + (fitstNum + secNum));
+    private static double addition(double firstNum, double secNum) {
+        return  (firstNum + secNum);
     }
 
-    private static void subtraction() {
-        System.out.println("Ответ : " + (fitstNum - secNum));
+    private static double subtraction(double firstNum, double secNum) {
+        return (firstNum - secNum);
     }
 
-    private static void division() {
+    private static double division(double firstNum, double secNum) {
         if(secNum != 0) {
-            System.out.println("Ответ : " + (fitstNum / secNum));
+            return (firstNum / secNum);
         }
         else {
-            System.out.println("На ноль делить нелья!");
+            throw new ArithmeticException("Нельзя делить на ноль!");
         }
     }
 
-    private static void multiplication() {
-        System.out.println("Ответ : " + (fitstNum * secNum));
+    private static double multiplication(double firstNum, double secNum) {
+        return  (firstNum * secNum);
     }
 
-    private static void percent() {
-        System.out.println("Ответ : " + ((fitstNum * secNum) / PERCENT));
+    private static double percent(double firstNum, double secNum) {
+        return ((firstNum * secNum) / PERCENT);
     }
 
 

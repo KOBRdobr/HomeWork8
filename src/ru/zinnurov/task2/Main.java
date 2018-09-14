@@ -43,10 +43,7 @@ public class Main {
         secNum = input();
         System.out.println();
 
-        Calculator calc = new Calculator(firstNum, secNum, sign);
-
-        Calculator.chooseOperation();
-
+        Calculator.chooseOperation(firstNum, secNum, sign);
 
 
 

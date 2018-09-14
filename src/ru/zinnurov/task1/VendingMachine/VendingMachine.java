@@ -6,7 +6,11 @@ package ru.zinnurov.task1.VendingMachine;
  */
 public class VendingMachine {
     private double money = 0;
-    private String[] drinks = new String[] {"Кока-кола", "Спрайт", "Фанта"};
+    private String[] drinks;
+
+    public VendingMachine(String[] drinks) {
+        this.drinks = drinks;
+    }
 
     public void addMoney(double money) {
         this.money = money;
